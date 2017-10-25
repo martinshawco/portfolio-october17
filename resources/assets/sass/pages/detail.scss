@@ -1,0 +1,72 @@
+@import "../variables";
+
+
+
+
+// ====== Project Image ======
+
+.image_container{
+	width: calc(50% - 30px);
+	height: auto;
+	margin: 0 20px;
+	margin-right: 10px;
+	float: left;
+	background: $showcase-item-bg-default-color;
+
+	img{
+		width: calc(100% - 40px);
+		height: auto;
+		margin: 20px;
+
+		&.containedcenter{
+			text-align: center;
+			width: auto;
+			max-width: calc(100% - 40px);
+			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+}
+
+
+
+
+// ====== Project Details ======
+
+.details_container{
+	width: calc(50% - 30px);
+	height: auto;
+	margin: 0 20px;
+	margin-left: 10px;
+	float: left;
+	background: $details-view-bg-default-color;
+
+	h1.d_name{
+		width: calc(100% - 60px);
+		margin: 0 30px;
+		margin-top: 20px;
+		font-size: 18pt;
+		text-transform: uppercase;		
+	}
+
+	p.d_description{
+		width: calc(100% - 60px);
+		margin: 0 30px;
+		margin-top: 10px;
+		font-size: 13pt;
+
+	}
+
+	.d_link_container{
+		a.d_link{
+			width: calc(100% - 60px);
+			margin: 0 30px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			display: block;
+			font-weight: bold;
+		}
+	}
+}
