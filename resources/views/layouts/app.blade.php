@@ -24,40 +24,23 @@
     <body>
 
         <div id="app">
-            <div class="splashscreen_container">
-                <div class="splashscreen">
-                    <div class="ss_logo">
-                        @component('components.logo')
-                        @endcomponent
-                    </div>
-                    <div class="ss_tagline">
-                        Experienced Software Engineer &amp; Web Developer building complex client projects of all types &amp; sizes.
-                        <b>I'm currently seeking a 12-month Industrial Placement</b>
-                        <!-- <br/> -->
-                        <!-- <a href="#" class="ss_tl_continuelink">See my work &rarr;</a> -->
-                    </div>
-                </div>
-            </div>
 
             <div class="mainnav_container">
                 <div class="mainnav_title">
                     <a href="/" class="mn_t_linktohomepage">
-                        <img src="/images/logo/logo_normal.png" alt="">
+                        <img src="/images/logo/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="mainnav_menu">
-                    <li class="mn_m_item"><a target="_blank" href="https://www.linkedin.com/in/martin-shaw-13935b106/"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="mn_m_item"><a target="_blank" href="https://www.behance.net/repmartinshaw"><i class="fa fa-behance"></i></a></li>
-                    <li class="mn_m_item"><a target="_blank" href="http://github.com/martinshaw"><i class="fa fa-github"></i></a></li>
-                    <li class="mn_m_item cv"><a target="_blank" href="/cv">Curriculum Vitae</a></li>
+                    <li class="mn_m_item"><a style="color: #0077B5 !important;" target="_blank" href="https://www.linkedin.com/in/martin-shaw-13935b106/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="mn_m_item"><a style="color: #1769FF !important;" target="_blank" href="https://www.behance.net/repmartinshaw"><i class="fa fa-behance"></i></a></li>
+                    <li class="mn_m_item"><a style="color: #181717 !important;" target="_blank" href="http://github.com/martinshaw"><i class="fa fa-github"></i></a></li>
+                    <li class="mn_m_item cv"><a target="_blank" href="/cv"><span class="mn_m_i_cv_desktop">Curriculum Vitae</span><span class="mn_m_i_cv_phone">CV</span></a></li>
                 </ul>
             </div>
             @yield('content')
+
         </div>
 
-       <!--  <footer class="footer_container">
-            
-        </footer>
- -->
     </body>
 </html>

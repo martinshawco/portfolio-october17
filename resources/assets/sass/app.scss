@@ -3,8 +3,9 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,600,700);
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:100,300,400,600);
 
-// Variables
+// Variables & Responsive Mixins
 @import "variables";
+@import "responsive";
 
 // Reset.css
 @import "node_modules/reset-css/reset";
@@ -14,6 +15,17 @@
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// Avoid DocumentReady flash, hide then reveal with JS
+body{
+	opacity: 0;
+}
+
+
+
+
+
 
 
 // ====== Global SCSS ======
@@ -30,57 +42,12 @@ html, body, #app {
 	line-height: $line-height-base;
 }
 
-// Avoid DocumentReady flash, hide then reveal with JS
-body{
-	opacity: 0;
-}
-
 a {
 	text-decoration: none;
 	color: $text-color;
 }
 
 
-
-
-
-
-
-// ====== Splashscreen ======
-
-.splashscreen_container{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background: black;
-	z-index: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden !important;
-
-	.splashscreen{
-		width: 700px;
-		height: 100%;
-		color: white;
-		padding-top: 400px;
-
-		.ss_logo{
-
-		}
-
-		.ss_tagline{
-			font-size: 16pt;
-
-			b{
-				padding-top: 15px;
-				display: block;
-			}
-		}
-	}
-
-
-}
 
 
 
@@ -105,6 +72,8 @@ a {
 
 		img{
 			width: 200px;
+			position: relative;
+			top: 9px;
 		}
 	}
 
@@ -118,15 +87,15 @@ a {
 		.mn_m_item{
 			display: table-cell;
 			padding: 0 14px;
-			font-size: 20pt;
+			font-size: 18pt;
 
 			&.cv{
 				font-size: 15pt;
 				
 				a{
 					position: relative;
-					top: -4px;
-					color: #fff !important;
+					top: -2px;
+					color: $mainnav-default-color !important;
 				}
 			}
 
@@ -144,10 +113,13 @@ a {
 					color: $mainnav-hover-color;
 				}
 				&.current{
-					// font-weight: bold;
 					color: $mainnav-current-color;
 				}
 			}
+		}
+
+		.mn_m_i_cv_phone{
+			display: none;
 		}
 	}
 }
@@ -156,11 +128,36 @@ a {
 
 
 
-// ====== Footer ======
 
-footer.footer_container{
-	width: calc(100% - 100px);
-	height: 120px;
-	margin: 20px 50px;		
-	background: red;
+
+@include phone {
+
+	.mainnav_container{
+		padding: 0 !important;
+		width: 100% !important;
+	}
+
+	.mainnav_title, .mainnav_menu{
+		width: 100% !important;
+		height: auto !important;
+		display: block !important;
+		text-align: center;
+	}
+
+	.mn_m_item{
+		width: 25% !important;
+		padding: 15px 0 !important;
+		display: block !important;
+    	float: left !important;
+		text-align: center;
+	}
+
+	.mn_m_i_cv_phone{
+		display: block !important;
+	}
+	
+	.mn_m_i_cv_desktop{
+		display: none !important;
+	}
+
 }

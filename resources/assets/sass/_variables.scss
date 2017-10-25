@@ -1,6 +1,6 @@
 
 // Body
-$body-bg: #111;
+$body-bg: #eee;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -25,11 +25,12 @@ $line-height-base: 1.6;
 
 // Colors
 $logo-color: #444;
-$text-color: #eee;
-$mainnav-default-color: darken($text-color, 30);
+$text-color: #222;
+
+$mainnav-default-color: $text-color;
 $mainnav-hover-color: lighten($text-color, 20);
 $mainnav-current-color: #fff;
-$showcase-item-bg-default-color: #eee;
+$showcase-item-bg-default-color: #fff;
 $showcase-item-bg-hover-color: lighten($body-bg, 5);
 $subtitle-color: lighten($text-color, 50);
 $tag-bg-color: rgba(250, 250, 250, 0.46);

@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../responsive";
 
 
 
@@ -47,7 +48,7 @@
 				padding-top: 120px;
 				position: relative;
 				top: -100%;
-				background: rgba(0,0,0,0.5);    
+				background: rgba(0,0,0,0.3);    
 				opacity: 0;
 
 				.s_m_i_c_title{
@@ -87,3 +88,23 @@
 	}
 }
 
+
+
+
+@include phone {
+
+	.s_m_item{
+		width: calc(100% - 12px) !important;
+	}
+
+}
+
+
+
+@include tablet {
+
+	.s_m_item{
+		width: calc(50% - 12px) !important;
+	}
+
+}
