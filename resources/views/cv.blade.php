@@ -19,5 +19,5 @@
 
 
 @section('content')
-	<iframe src="/static/cv.pdf" frameborder="0" ></iframe>
+	<iframe src="../static/cv.pdf" frameborder="0" ></iframe>
 @endsection

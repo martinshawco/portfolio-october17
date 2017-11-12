@@ -68,26 +68,17 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 12:
+/***/ 11:
 /***/ (function(module, exports) {
 
-$(function () {
-
-	// Add event handling for Showcase Items
-	$(".s_m_item").hover(function () {
-		$(this).find(".s_m_i_container").animate({ opacity: 1 }, 500);
-	});
-	$(".s_m_item").mouseleave(function () {
-		$(this).find(".s_m_i_container").animate({ opacity: 0 }, 100);
-	});
-});
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/var/www/html/resources/assets/js/pages/newindex.js'");
 
 /***/ }),
 
 /***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(11);
 
 
 /***/ })

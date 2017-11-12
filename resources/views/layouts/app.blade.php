@@ -35,12 +35,18 @@
                     <li class="mn_m_item"><a style="color: #0077B5 !important;" target="_blank" href="https://www.linkedin.com/in/martin-shaw-13935b106/"><i class="fa fa-linkedin"></i></a></li>
                     <li class="mn_m_item"><a style="color: #1769FF !important;" target="_blank" href="https://www.behance.net/repmartinshaw"><i class="fa fa-behance"></i></a></li>
                     <li class="mn_m_item"><a style="color: #181717 !important;" target="_blank" href="http://github.com/martinshaw"><i class="fa fa-github"></i></a></li>
-                    <li class="mn_m_item cv"><a target="_blank" href="/cv"><span class="mn_m_i_cv_desktop">Curriculum Vitae</span><span class="mn_m_i_cv_phone">CV</span></a></li>
+                    <li class="mn_m_item cv"><a target="_blank" href="https://www.dropbox.com/s/w03xw8oq89sezjs/cv.pdf?dl=0"><span class="mn_m_i_cv_desktop">Curriculum Vitae</span><span class="mn_m_i_cv_phone">CV</span></a></li>
                 </ul>
             </div>
             @yield('content')
 
         </div>
+
+
+        {{-- Rainbow Easter Egg --}}
+        <script>
+            window.doRainbowEasterEgg(<?php echo isset($_GET["rainbow"]); ?>);
+        </script>
 
     </body>
 </html>

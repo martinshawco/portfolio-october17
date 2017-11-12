@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../responsive";
 
 
 
@@ -7,7 +8,7 @@
 
 .showcase_container{
 	width: calc(100% - 40px);
-	// width: 100%;
+	/* width: 100%;*/
 	height: auto;
 	margin: 0 20px;
 	display: table;
@@ -18,13 +19,20 @@
 		height: auto;
 
 		.s_m_item{
+			margin: 6px 6px;
 			width: calc(25% - 12px);
 			height: calc(400px - 12px);
+
 			float: left;
 			background-color: $showcase-item-bg-default-color;
 			cursor: pointer;
+			transition: box-shadow 500ms;
+			
+			border-radius: 4px;
 
-			margin: 6px 6px;
+			&:hover{
+				box-shadow: 0 5px 16px rgba(0,0,0,.2);
+			}
 
 
 			.s_m_i_image{
@@ -34,6 +42,8 @@
 				background-repeat: no-repeat;
 				background-position: top center;
 				transform: translateZ(20px);
+			
+				border-radius: 4px;
 
 				&.containedcenter{
 					background-size: contain;
@@ -42,13 +52,15 @@
 			}
 
 			.s_m_i_container{
-				width: 100%;
+				width: calc(100% + 1px);
 				height: calc(100% - 120px);
 				padding-top: 120px;
 				position: relative;
 				top: -100%;
-				background: rgba(0,0,0,0.5);    
+				background: rgba(255, 255, 255, .8);    
 				opacity: 0;
+
+				border-radius: 4px;
 
 				.s_m_i_c_title{
 					width: calc(100% - 100px);
@@ -56,16 +68,15 @@
 					padding: 0;
 					text-align: center;
 					font-size: 22pt;
-					font-weight: 400;
+					font-weight: 500;
 					font-family: $font-family-sans-serif;
-					color: #fff;
+					color: #000;
 
 				}
 				.s_m_i_c_yearandtags{
 					text-align: center;
 					font-size: 11pt;
-					font-weight: bold;
-					color: $subtitle-color;
+					font-weight: 400;
 					padding-top: 10px;
 
 					.tag{
@@ -74,7 +85,7 @@
 						background: $tag-bg-color;
 						font-size: 12pt;
 						border-radius: 5px;
-						color: #000;
+						color: #fff;
 
 					}
 				}
@@ -87,3 +98,23 @@
 	}
 }
 
+
+
+
+@include phone {
+
+	.s_m_item{
+		width: calc(100% - 12px) !important;
+	}
+
+}
+
+
+
+@include tablet {
+
+	.s_m_item{
+		width: calc(50% - 12px) !important;
+	}
+
+}

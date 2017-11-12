@@ -15,18 +15,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/oldbrowser', function () {
-    return view('oldbrowser');
-});
-
-Route::get('/newindex', function () {
-    return view('newindex');
-});
-
 Route::get('/detail/{id}', function ($id) {
     return view('detail')->with("id", $id);
 });
 
 Route::get('/cv', function () {
-    return view('cv');
+    // return view('cv');
+    return Response::download("cv.pdf");
 });
